@@ -132,3 +132,4 @@ pnpm run test:routing
 ## Security
 
 Tunnel uses outbound HTTPS. No public MCP port opens. Never share `CONTROL_PLANE_API_KEY` with user machines or other users. ChatGPT can invoke every tool exposed by the connected runtime, including file writes and process execution; keep `PROJECT_ROOTS` narrow, use an explicit process allowlist, and review prompts and tool confirmations carefully. Whole-machine mode increases the impact of prompt injection or a compromised account.
+# local-mcp-bxs
