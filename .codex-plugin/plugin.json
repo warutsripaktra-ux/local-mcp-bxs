@@ -1,0 +1,14 @@
+{
+  "name": "local-gateway-mcp",
+  "version": "0.1.0",
+  "description": "Local MCP gateway exposed to ChatGPT via OpenAI Secure MCP Tunnel",
+  "schemaVersion": "1",
+  "mcpServer": {
+    "type": "http",
+    "url": "http://127.0.0.1:8787/mcp"
+  },
+  "auth": {
+    "type": "oauth",
+    "protectedResource": "/.well-known/oauth-protected-resource"
+  }
+}
