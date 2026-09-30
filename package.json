@@ -1,0 +1,86 @@
+{
+  "name": "futuremakers-gateway-mcp",
+  "version": "0.1.0",
+  "description": "Local MCP gateway for ChatGPT through OpenAI Secure MCP Tunnel",
+  "license": "MIT",
+  "author": "FutureMakers Team",
+  "homepage": "https://github.com/futuremakersteam/local-gateway-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/futuremakersteam/local-gateway-mcp.git"
+  },
+  "type": "module",
+  "packageManager": "pnpm@11.21.0",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "bin": {
+    "futuremakers-gateway-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc && shx chmod +x dist/index.js",
+    "tunnel": "node scripts/run-tunnel.cjs",
+    "agent": "pnpm run build && node scripts/run-agent.cjs",
+    "router": "pnpm run build && node scripts/run-router.cjs",
+    "test:tunnel": "node test/run-tunnel.test.cjs && node test/runtime-boundary.test.cjs",
+    "test:routing": "node test/routing.test.js",
+    "test:router-http": "node test/router-http.test.cjs",
+    "test:router-oauth": "node test/router-oauth.test.cjs",
+    "test:router-bootstrap": "node test/router-bootstrap.test.cjs",
+    "test:router-pairing": "node test/router-pairing.test.cjs",
+    "test:router-agent-channel": "node test/router-agent-channel.test.cjs",
+    "test:router-agent-client": "node test/router-agent-client.test.cjs",
+    "test:router-agent-relay": "node test/router-agent-relay.test.cjs",
+    "test:router-audit-package": "node test/router-audit-package.test.cjs",
+    "package": "node scripts/package-plugin.cjs"
+  },
+  "keywords": [
+    "mcp",
+    "chatgpt",
+    "local-gateway",
+    "file-editing",
+    "process-management"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "@opendocsg/pdf2md": "^0.2.2",
+    "@puppeteer/browsers": "^3.2.1",
+    "@tiptap/core": "^3.22.3",
+    "@tiptap/extension-image": "^3.22.3",
+    "@tiptap/extension-table": "^3.22.4",
+    "@tiptap/extension-table-cell": "^3.22.4",
+    "@tiptap/extension-table-header": "^3.22.4",
+    "@tiptap/extension-table-row": "^3.22.4",
+    "@tiptap/pm": "^3.22.3",
+    "@tiptap/starter-kit": "^3.22.3",
+    "@vscode/ripgrep": "^1.15.9",
+    "cross-fetch": "^4.1.0",
+    "exceljs": "^4.4.0",
+    "fastest-levenshtein": "^1.0.16",
+    "file-type": "^21.1.1",
+    "glob": "^10.3.10",
+    "highlight.js": "^11.11.1",
+    "isbinaryfile": "^5.0.4",
+    "markdown-it": "^14.1.0",
+    "md-to-pdf": "^5.2.5",
+    "open": "^10.2.0",
+    "pdf-lib": "^1.17.1",
+    "pizzip": "^3.2.0",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "sharp": "^0.34.5",
+    "tiptap-markdown": "^0.9.0",
+    "unified": "^11.0.5",
+    "unpdf": "^1.4.0",
+    "zod": "^3.24.1",
+    "zod-to-json-schema": "^3.23.5"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/ext-apps": "^1.0.1",
+    "@types/markdown-it": "^14.2.0",
+    "@types/node": "^20.17.24",
+    "shx": "^0.3.4",
+    "typescript": "^5.3.3"
+  }
+}

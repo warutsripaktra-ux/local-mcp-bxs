@@ -1,0 +1,15 @@
+Python REPL output:
+Python 3.13.5 (v3.13.5:6cb20a219a8, Jun 11 2025, 12:23:45) [Clang 16.0.0 (clang-1600.0.26.6)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> STARTING PYTHON TEST
+>>> REPL_TEST_VALUE: 174
+>>>
+
+Node.js REPL output:
+Welcome to Node.js v24.17.0.
+Type ".help" for more information.
+> STARTING NODE TEST
+undefined
+> NODE_REPL_TEST_VALUE: 6
+undefined
+>
